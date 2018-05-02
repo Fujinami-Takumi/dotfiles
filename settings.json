@@ -1,0 +1,7 @@
+// 既定の設定を上書きするには、このファイル内に設定を挿入します
+{
+    "clang.executable": "clang-3.8",
+    "window.enableMenuBarMnemonics": false,
+    "window.zoomLevel": 0,
+    "C_Cpp.clang_format_path": "/usr/bin/clang-format"
+}
