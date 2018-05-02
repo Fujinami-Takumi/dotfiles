@@ -1,10 +1,10 @@
 #!/bin/sh
 
-ln -s .zshrc ~/.zshrc
+ln -s ~/dotfiles/.zshrc ~/.zshrc
 
-ln -s keybindings.json ~/.config/Code/User/keybindings.json
-ln -s settings.json ~/.config/Code/User/settings.json
+ln -s ~/dotfiles/keybindings.json ~/.config/Code/User/keybindings.json
+ln -s ~/dotfiles/settings.json ~/.config/Code/User/settings.json
 
-ln -s init.el ~/.emacs.d/init.el
+ln -s ~/dotfiles/init.el ~/.emacs.d/init.el
 
-ln -s .tmux.conf ~/.byobu/.tmux.conf
+ln -s ~/dotfiles/.tmux.conf ~/.byobu/.tmux.conf
