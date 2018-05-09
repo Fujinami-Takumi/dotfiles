@@ -38,6 +38,25 @@ zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 
 source /opt/ros/kinetic/setup.zsh
 
-alias python='ptipython'
+#alias
+#python
+alias py='ptipython3'
+alias py2='ptipython'
+alias jn='jupyter notebook'
+#ros
 alias cm='catkin_make'
+#git
 alias st='git status'
+
+# pip zsh completion start
+function _pip_completion {
+  local words cword
+  read -Ac words
+  read -cn cword
+  reply=( $( COMP_WORDS="$words[*]" \
+             COMP_CWORD=$(( cword-1 )) \
+             PIP_AUTO_COMPLETE=1 $words[1] ) )
+}
+compctl -K _pip_completion pip
+# pip zsh completion end
+
