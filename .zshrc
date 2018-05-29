@@ -48,6 +48,9 @@ alias cm='catkin_make'
 #git
 alias st='git status'
 
+#display
+alias dp='display'
+
 # pip zsh completion start
 function _pip_completion {
   local words cword
