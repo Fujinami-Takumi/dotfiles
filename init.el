@@ -1,13 +1,19 @@
 (require 'package)
 
-;Add package archives
+; cask settings
+(require 'cask "~/.cask/cask.el")
+
+
+; Add package archives
 (add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/"))
 ;(add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/"))
 ;(fset 'package-desc-vers 'package--ac-desc-version)
 
-;Initialize
+; Initialize
 (package-initialize)
 
+; initialize
+(cask-initialize)
 
 (eval-after-load "yasnippet"
   '(progn
@@ -47,11 +53,9 @@
   '(progn
      (when (locate-library "flycheck-irony")
               (flycheck-irony-setup))))
+;; end c++ settings
 
-(setq backup-directory-alist '((".*" . "~/.emacs.d/ehist")))
-
-(global-linum-mode)
-
+; cmake setting
 (require 'cmake-mode)
 (setq auto-mode-alist
       (append
@@ -59,6 +63,16 @@
        '(("\\.cmake\\'" . cmake-mode))
        auto-mode-alist))
 
+;ein emacs ipython notebook
+(require 'ein)
+
+; editor settings
 (setq default-tab-width 4)
 
 (define-key key-translation-map (kbd "C-h") (kbd "<DEL>"))
+
+(global-linum-mode)
+
+; backup file setting
+(setq backup-directory-alist '((".*" . "~/.emacs.d/ehist")))
+

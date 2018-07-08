@@ -22,7 +22,8 @@ zstyle ':completion:*' auto-description 'specify: %d'
 zstyle ':completion:*' completer _expand _complete _correct _approximate
 zstyle ':completion:*' format 'Completing %d'
 zstyle ':completion:*' group-name ''
-zstyle ':completion:*' menu select=2
+#zstyle ':completion:*' menu select=2
+zstyle ':completion:*' menu select=0
 eval "$(dircolors -b)"
 zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
 zstyle ':completion:*' list-colors ''
@@ -51,6 +52,12 @@ alias st='git status'
 #display
 alias dp='display'
 
+#ros source "devel" directory
+#I want more inteligent source system.
+alias rs='source ./devel/setup.zsh'
+
+alias emacs='emacs -nw'
+
 # pip zsh completion start
 function _pip_completion {
   local words cword
@@ -63,3 +70,5 @@ function _pip_completion {
 compctl -K _pip_completion pip
 # pip zsh completion end
 
+#CASK 
+export PATH="/home/fujinami/.cask/bin:$PATH"
