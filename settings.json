@@ -3,5 +3,6 @@
     "clang.executable": "clang-3.8",
     "window.enableMenuBarMnemonics": false,
     "window.zoomLevel": 0,
-    "C_Cpp.clang_format_path": "/usr/bin/clang-format"
+    "C_Cpp.clang_format_path": "/usr/bin/clang-format",
+    "breadcrumbs.enabled": true
 }

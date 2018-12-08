@@ -15,6 +15,8 @@
 ; initialize
 (cask-initialize)
 
+
+; c++ settings
 (eval-after-load "yasnippet"
   '(progn
      (define-key yas-keymap (kdb "<tab>") nil)
@@ -63,7 +65,7 @@
        '(("\\.cmake\\'" . cmake-mode))
        auto-mode-alist))
 
-;ein emacs ipython notebook
+; ein emacs ipython notebook
 (require 'ein)
 
 ; editor settings
@@ -72,6 +74,10 @@
 (define-key key-translation-map (kbd "C-h") (kbd "<DEL>"))
 
 (global-linum-mode)
+
+; sh-script settings
+(setq sh-basic-offset 2)
+(setq sh-indentation 2)
 
 ; backup file setting
 (setq backup-directory-alist '((".*" . "~/.emacs.d/ehist")))

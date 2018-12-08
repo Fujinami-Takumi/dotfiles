@@ -30,3 +30,4 @@
 (depends-on "irony")
 (depends-on "flycheck")
 (depends-on "cmake-mode")
+(depends-on "zlc")

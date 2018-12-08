@@ -5,6 +5,11 @@ promptinit
 prompt adam1
 
 setopt histignorealldups sharehistory
+setopt auto_cd
+setopt auto_pushd
+setopt pushd_ignore_dups
+setopt hist_ignore_all_dups
+setopt hist_ignore_space
 
 # Use emacs keybindings even if our EDITOR is set to vi
 bindkey -e
@@ -17,6 +22,9 @@ HISTFILE=~/.zsh_history
 # Use modern completion system
 autoload -Uz compinit
 compinit
+
+
+WORDCHARS='*?_-.[]~=&;!#$%^(){}<>'
 
 zstyle ':completion:*' auto-description 'specify: %d'
 zstyle ':completion:*' completer _expand _complete _correct _approximate
@@ -31,9 +39,7 @@ zstyle ':completion:*' list-prompt %SAt %p: Hit TAB for more, or the character t
 zstyle ':completion:*' matcher-list '' 'm:{a-z}={A-Z}' 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=* l:|=*'
 zstyle ':completion:*' menu select=long
 zstyle ':completion:*' select-prompt %SScrolling active: current selection at %p%s
-zstyle ':completion:*' use-compctl false
 zstyle ':completion:*' verbose true
-
 zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'
 zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 
@@ -42,12 +48,13 @@ source /opt/ros/kinetic/setup.zsh
 #alias
 #python
 alias py='ptipython3'
-alias py2='ptipython'
+alias py2='ptipython2'
 alias jn='jupyter notebook'
 #ros
 alias cm='catkin_make'
 #git
 alias st='git status'
+alias gl='git log --oneline --graph --decorate'
 
 #display
 alias dp='display'
@@ -57,6 +64,7 @@ alias dp='display'
 alias rs='source ./devel/setup.zsh'
 
 alias emacs='emacs -nw'
+alias e='emacs'
 
 # pip zsh completion start
 function _pip_completion {
