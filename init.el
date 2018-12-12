@@ -72,6 +72,7 @@
 (setq default-tab-width 4)
 
 (define-key key-translation-map (kbd "C-h") (kbd "<DEL>"))
+(global-set-key (kbd "C-c ;") 'comment-or-uncomment-region)
 
 (global-linum-mode)
 
