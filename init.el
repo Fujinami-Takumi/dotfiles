@@ -75,6 +75,7 @@
 (global-set-key (kbd "C-c ;") 'comment-or-uncomment-region)
 
 (global-linum-mode)
+(column-number-mode t)
 
 ; sh-script settings
 (setq sh-basic-offset 2)

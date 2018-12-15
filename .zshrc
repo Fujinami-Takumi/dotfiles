@@ -54,6 +54,10 @@ alias jn='jupyter notebook'
 alias cm='catkin_make'
 #git
 alias st='git status'
+alias gch='git checkout'
+alias gm='git merge'
+alias gco='git commit'
+alias gaa='git add .'
 alias gl='git log --oneline --graph --decorate'
 
 #display
@@ -78,5 +82,12 @@ function _pip_completion {
 compctl -K _pip_completion pip
 # pip zsh completion end
 
-#CASK 
+# path
 export PATH="/home/fujinami/.cask/bin:$PATH"
+
+# settings for cuda
+export PATH="/usr/local/cuda/bin:$PATH"
+export LD_LIBRARY_PATH="/usr/local/cuda/lib64:$LD_LIBRARY_PATH"
+
+# settings for caffe
+export PYTHONPATH="/home/fujinami/Documents/download_programs/caffe/python:$PYTHONPATH"
