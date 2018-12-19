@@ -23,7 +23,6 @@ HISTFILE=~/.zsh_history
 autoload -Uz compinit
 compinit
 
-
 WORDCHARS='*?_-.[]~=&;!#$%^(){}<>'
 
 zstyle ':completion:*' auto-description 'specify: %d'
@@ -90,4 +89,7 @@ export PATH="/usr/local/cuda/bin:$PATH"
 export LD_LIBRARY_PATH="/usr/local/cuda/lib64:$LD_LIBRARY_PATH"
 
 # settings for caffe
-export PYTHONPATH="/home/fujinami/Documents/download_programs/caffe/python:$PYTHONPATH"
+export PYTHONPATH="/home/fujinami/caffe/caffe/python:$PYTHONPATH"
+
+# # pyenv settings
+# eval "$(pyenv init -)"
