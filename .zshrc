@@ -82,14 +82,14 @@ compctl -K _pip_completion pip
 # pip zsh completion end
 
 # path
-export PATH="/home/fujinami/.cask/bin:$PATH"
+export PATH="${HOME}/.cask/bin:$PATH"
 
 # settings for cuda
 export PATH="/usr/local/cuda/bin:$PATH"
 export LD_LIBRARY_PATH="/usr/local/cuda/lib64:$LD_LIBRARY_PATH"
 
 # settings for caffe
-export PYTHONPATH="/home/fujinami/caffe/caffe/python:$PYTHONPATH"
+export PYTHONPATH="${HOME}/caffe/caffe/python:$PYTHONPATH"
 
 # # pyenv settings
 # eval "$(pyenv init -)"
