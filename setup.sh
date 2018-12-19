@@ -1,6 +1,7 @@
 #!/bin/sh
 
 ln -s ~/dotfiles/.zshrc ~/.zshrc
+ln -s ~/dotfiles/.zshenv ~/.zshenv
 
 ln -s ~/dotfiles/keybindings.json ~/.config/Code/User/keybindings.json
 ln -s ~/dotfiles/settings.json ~/.config/Code/User/settings.json
